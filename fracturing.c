@@ -2,42 +2,48 @@
 #include <math.h>
 
 //List of functions
+double askForUserInput();
 double calculateDistance();
 double calculatePerimeter();
 double calculateArea();
-double calculateWith();
+double calculateWidth();
+double calculateHeight();
 
 
 //main function
 int main(int argc, char** argv){
-    double myDistance = calculateDistance();
-
+    //Calling functions from main
+    calculateDistance();
+    calculatePerimeter();
+    calculateArea();
+    calculateWidth();
+    calculateHeight();
 
     return 0;
 }//end of main function
 
+//OBJECTIVE: To ask for user input
+double askForUserInput(){
+    double pointValue;
+    scanf("%lf", &pointValue);
+    return pointValue;
+}
 
 //OBJECTIVE: To calculate the distance between two points (x,y)
 double calculateDistance(){
-    double x1 = 0.0;
-    double y1 = 0.0;
-    double x2 = 0.0;
-    double y2 = 0.0;
-    double distance = 0.0;
+    double x1, y1, x2, y2, distance;
 
     //Enter first point
-    printf("Enter first point:\n");
-    printf("x = ");
-    scanf("%lf",&x1);
+    printf("Enter first point:\nx = ");
+    x1 = askForUserInput();
     printf("y = ");
-    scanf("%lf", &y1);
+    y1 = askForUserInput();
 
     //Enter second point
-    printf("Enter second point:\n");
-    printf("x = ");
-    scanf("%lf",&x2);
+    printf("Enter second point:\nx = ");
+    x2 = askForUserInput();
     printf("y = ");
-    scanf("%lf", &y2);
+    y2 = askForUserInput();
 
     //calculate distance
     distance = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));   
@@ -66,7 +72,15 @@ double calculateArea(){
 
 
 //OBJECTIVE: To calculate the With
-double calculateWith(){
+double calculateWidth(){
+    
+    
+    return 0;
+}
+
+
+//OBJECTIVE: To calculate the Height
+double calculateHeight(){
     
     
     return 0;
