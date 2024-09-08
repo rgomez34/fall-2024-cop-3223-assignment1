@@ -21,26 +21,31 @@ double calculateHeight();
 int main(int argc, char** argv){
 
     //calculateDistance();
-    printf("Calcuate Distance (Diameter)\n");
+    printf("Calcuate Distance (Diameter):\n");
     double distance = calculateDistance();
     printf("The distance between the two points is %.2lf\n\n", distance);
     
     //calculatePerimeter
-    printf("Calcuate Perimeter (PI x Diameter)\n");
+    printf("Calcuate Perimeter (PI x Diameter):\n");
     calculatePerimeter();
   
 
     //calculateArea
-    printf("Calcuate Area (PI x radius^2)\n");
+    printf("Calcuate Area (PI x radius^2):\n");
     calculateArea();
 
+    //calculateWidth
+    printf("Calculate Width:\n");
     calculateWidth();
+
+    //calculateHeight
+    printf("Calculate Height:\n");
     calculateHeight();
 
     return 0;
 }//end of main function
 
-//OBJECTIVE: To ask for user input
+//OBJECTIVE: Helper function to ask for user input
 double askForUserInput(){
     double pointValue;
     scanf("%lf", &pointValue);
@@ -84,7 +89,7 @@ double calculatePerimeter(){
     
     //my perceived difficulty
     return 3.5;
-}
+}//end of calculatePerimeter() function
 
 //OBJECTIVE: To calculate the Area
 double calculateArea(){
@@ -99,7 +104,7 @@ double calculateArea(){
     
     //my perceived difficulty
     return 3.8;
-}
+}//end of calculateArea() function
 
 
 //OBJECTIVE: To calculate the Width
@@ -109,7 +114,7 @@ double calculateWidth(){
     printf("The width of the city encompassed by your request is %.2lf\n\n", diameter);
     
     return 2.0;
-}
+}//end of calculateWidth() function
 
 
 //OBJECTIVE: To calculate the Height
@@ -119,6 +124,6 @@ double calculateHeight(){
     printf("The height of the city encompassed by your request is %.2lf\n\n", diameter);
     
     return 2.0;
-}
+}//end of calculateHeight() function
 
 //to compile: gcc fracturing.c -lm && ./a.out
