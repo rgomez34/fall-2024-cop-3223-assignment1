@@ -102,19 +102,23 @@ double calculateArea(){
 }
 
 
-//OBJECTIVE: To calculate the With
+//OBJECTIVE: To calculate the Width
 double calculateWidth(){
+    //get diameter
+    double diameter = calculateDistance();
+    printf("The width of the city encompassed by your request is %.2lf\n\n", diameter);
     
-    
-    return 0;
+    return 2.0;
 }
 
 
 //OBJECTIVE: To calculate the Height
 double calculateHeight(){
+    //get diameter
+    double diameter = calculateDistance();
+    printf("The height of the city encompassed by your request is %.2lf\n\n", diameter);
     
-    
-    return 0;
+    return 2.0;
 }
 
 //to compile: gcc fracturing.c -lm && ./a.out
