@@ -1,5 +1,12 @@
+/*
+Name: Rodney Gomez Ramos
+UCFID: 5411180
+*/
+
 #include <stdio.h>
 #include <math.h>
+
+#define PI 3.14159
 
 //List of functions
 double askForUserInput();
@@ -12,10 +19,21 @@ double calculateHeight();
 
 //main function
 int main(int argc, char** argv){
-    //Calling functions from main
-    calculateDistance();
+
+    //calculateDistance();
+    printf("Calcuate Distance (Diameter)\n");
+    double distance = calculateDistance();
+    printf("The distance between the two points is %.2lf\n\n", distance);
+    
+    //calculatePerimeter
+    printf("Calcuate Perimeter (PI x Diameter)\n");
     calculatePerimeter();
+  
+
+    //calculateArea
+    printf("Calcuate Area (PI x radius^2)\n");
     calculateArea();
+
     calculateWidth();
     calculateHeight();
 
@@ -48,26 +66,39 @@ double calculateDistance(){
     //calculate distance
     distance = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));   
 
-    //Print the following 3 lines
+    //Print points entered
     printf("\nPoint #1 entered: (%.1lf,%.1lf) \n", x1, y1);
     printf("Point #2 entered: (%.1lf,%.1lf) \n", x2, y2);
-    printf("The distance between the two points is %.2f\n", distance);
-
+    
     return distance;
 }//end of calculateDistance() function
 
 //OBJECTIVE: To calculate the Perimiter
 double calculatePerimeter(){
+    //get diameter 
+    double diameter = calculateDistance();
+    //calculate perimeter
+    double perimeter = PI*diameter;
+
+    printf("The perimeter of the city encompassed by your request is %.2lf\n\n", perimeter);
     
-    
-    return 0;
+    //my perceived difficulty
+    return 3.5;
 }
 
 //OBJECTIVE: To calculate the Area
 double calculateArea(){
+    //get diameter
+    double diameter = calculateDistance();
+    //find the radius r first
+    double radius = diameter/2;
+    //calculate area
+    double area = PI * pow(radius,2);
     
+    printf("The area of the city encompassed by your request is %.2lf\n\n", area);
     
-    return 0;
+    //my perceived difficulty
+    return 3.8;
 }
 
 
